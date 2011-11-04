@@ -1,3 +1,9 @@
+# revision 18302
+# category Package
+# catalog-ctan /macros/generic/multido
+# catalog-date 2010-05-15 11:36:20 +0200
+# catalog-license lppl
+# catalog-version 1.42
 Name:		texlive-multido
 Version:	1.42
 Release:	1
@@ -47,6 +53,7 @@ is with the more common integer loops.
 %doc %{_texmfdistdir}/doc/generic/multido/multido.pdf
 #- source
 %doc %{_texmfdistdir}/source/generic/multido/Makefile
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,3 +64,5 @@ is with the more common integer loops.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
