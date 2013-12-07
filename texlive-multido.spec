@@ -6,7 +6,7 @@
 # catalog-version 1.42
 Name:		texlive-multido
 Version:	1.42
-Release:	3
+Release:	4
 Summary:	A loop facility for Generic TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/multido
