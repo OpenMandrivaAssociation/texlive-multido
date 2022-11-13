@@ -1,19 +1,13 @@
-# revision 18302
-# category Package
-# catalog-ctan /macros/generic/multido
-# catalog-date 2010-05-15 11:36:20 +0200
-# catalog-license lppl
-# catalog-version 1.42
 Name:		texlive-multido
-Version:	1.42
-Release:	11
+Version:	18302
+Release:	1
 Summary:	A loop facility for Generic TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/multido
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/multido.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/multido.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/multido.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/multido.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/multido.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/multido.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ equally applicable in graphics applications like PSTricks as it
 is with the more common integer loops.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -47,24 +41,11 @@ is with the more common integer loops.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.42-2
-+ Revision: 754201
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.42-1
-+ Revision: 719085
-- texlive-multido
-- texlive-multido
-- texlive-multido
-- texlive-multido
-
