@@ -1,6 +1,6 @@
 Name:		texlive-multido
 Version:	18302
-Release:	1
+Release:	2
 Summary:	A loop facility for Generic TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/multido
