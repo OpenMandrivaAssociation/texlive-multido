@@ -3,7 +3,7 @@ Version:	18302
 Release:	2
 Summary:	A loop facility for Generic TeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/multido
+URL:		https://www.ctan.org/tex-archive/macros/generic/multido
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/multido.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/multido.doc.r%{version}.tar.xz
